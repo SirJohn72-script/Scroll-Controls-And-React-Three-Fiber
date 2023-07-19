@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab&display=swap");
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+.container-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Labels */
+.labels_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.labels_wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Labels cards */
+.label_card {
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.label_card--hidden {
+  opacity: 0;
+}
+
+.label_card ul {
+  list-style: none;
+}
+
+/* Text Styles */
+.text_header {
+  font-family: "Lobster";
+  font-size: 128px;
+  color: #333333;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  line-height: 137px;
+  margin-left: -10px;
+}
+
+.text_subheader {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  color: #fff;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+}
+
+.text_body {
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  color: #333333;
+  line-height: 32px;
+}
+
+.text_item_des {
+  padding: 0.5rem 1.5rem;
+}
+.text_item_des_border_top {
+  border-top: 1px solid #333333;
+}
+.text_item_des_border_bottom {
+  border-bottom: 1px solid #333333;
+}
+
+/* .canvas div div::-webkit-scrollbar {
+  display: none;
+}
+.canvas div div {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
