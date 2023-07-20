@@ -101,7 +101,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     // Nuka Cola - Classic
     {
       target: scene.getObjectByName("BottleGroup").position,
-      pointTime: 2.1,
+      pointTime: 2,
       animationsProperties: {
         x: 1,
         onUpdate: () => {},
@@ -109,7 +109,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: colors,
-      pointTime: 2.1,
+      pointTime: 2,
       animationsProperties: {
         cristal: "#555555",
         soda: "#000",
@@ -123,7 +123,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 2.1,
+      pointTime: 2,
       animationsProperties: {
         y: (350 / 180) * Math.PI,
         onUpdate: () => {},
@@ -150,7 +150,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 2.1,
+      pointTime: 2,
       animationsProperties: {
         background: "#F37070",
       },
@@ -159,7 +159,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     // Nuka Quantum
     {
       target: scene.getObjectByName("BottleGroup").position,
-      pointTime: 4.1,
+      pointTime: 4,
       animationsProperties: {
         x: -1,
         onUpdate: () => {},
@@ -167,7 +167,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: colors,
-      pointTime: 4.1,
+      pointTime: 4,
       animationsProperties: {
         cristal: "#108587",
         soda: "#D0FFFF",
@@ -181,7 +181,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 4.1,
+      pointTime: 4,
       animationsProperties: {
         y: -(350 / 180) * Math.PI,
         onUpdate: () => {},
@@ -218,7 +218,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 4.1,
+      pointTime: 4,
       animationsProperties: {
         background: "#71C4F4",
       },
@@ -227,7 +227,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     // Sunset - Sarsaparrilla
     {
       target: scene.getObjectByName("BottleGroup").position,
-      pointTime: 6.1,
+      pointTime: 6,
       animationsProperties: {
         x: 1,
         onUpdate: () => {},
@@ -235,7 +235,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: colors,
-      pointTime: 6.1,
+      pointTime: 6,
       animationsProperties: {
         cristal: "#7E3810",
         soda: "#602A0C",
@@ -286,7 +286,7 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 6.1,
+      pointTime: 6,
       animationsProperties: {
         background: "#F5C771",
       },
