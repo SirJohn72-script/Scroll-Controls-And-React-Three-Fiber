@@ -50,12 +50,20 @@ export const LoadTextures = (imagePaths) => {
 
 export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, brandMaterial, textures) => {
   const Animations = [
-    // Initial Animation
+    // Init Animations - Page 0
     {
       target: scene.getObjectByName("BottleGroup").position,
       pointTime: 0,
       animationsProperties: {
         x: 0,
+        onUpdate: () => {},
+      },
+    },
+    {
+      target: scene.getObjectByName("BottleGroup").rotation,
+      pointTime: 0,
+      animationsProperties: {
+        y: 0,
         onUpdate: () => {},
       },
     },
@@ -68,17 +76,10 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
         onUpdate: () => {
           cristalMaterial.color.set(new THREE.Color(colors.cristal.replace(",1)", ")")));
           cristalMaterial.needsUpdate = true;
+
           sodaMaterial.color.set(new THREE.Color(colors.soda.replace(",1)", ")")));
           sodaMaterial.needsUpdate = true;
         },
-      },
-    },
-    {
-      target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 0,
-      animationsProperties: {
-        y: 0,
-        onUpdate: () => {},
       },
     },
     {
@@ -98,7 +99,8 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
         background: "#000000",
       },
     },
-    // Nuka Cola - Classic
+
+    // Nuka Cola - Page 1
     {
       target: scene.getObjectByName("BottleGroup").position,
       pointTime: 2,
@@ -108,25 +110,26 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
       },
     },
     {
+      target: scene.getObjectByName("BottleGroup").rotation,
+      pointTime: 2,
+      animationsProperties: {
+        y: Math.PI * 2,
+        onUpdate: () => {},
+      },
+    },
+    {
       target: colors,
       pointTime: 2,
       animationsProperties: {
         cristal: "#555555",
-        soda: "#000",
+        soda: "#000000",
         onUpdate: () => {
           cristalMaterial.color.set(new THREE.Color(colors.cristal.replace(",1)", ")")));
           cristalMaterial.needsUpdate = true;
+
           sodaMaterial.color.set(new THREE.Color(colors.soda.replace(",1)", ")")));
           sodaMaterial.needsUpdate = true;
         },
-      },
-    },
-    {
-      target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 2,
-      animationsProperties: {
-        y: (350 / 180) * Math.PI,
-        onUpdate: () => {},
       },
     },
     {
@@ -150,18 +153,25 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 2,
+      pointTime: 2.1,
       animationsProperties: {
         background: "#F37070",
       },
     },
-
-    // Nuka Quantum
+    //   Quantum Cola - Page 2
     {
       target: scene.getObjectByName("BottleGroup").position,
       pointTime: 4,
       animationsProperties: {
         x: -1,
+        onUpdate: () => {},
+      },
+    },
+    {
+      target: scene.getObjectByName("BottleGroup").rotation,
+      pointTime: 4,
+      animationsProperties: {
+        y: -Math.PI * 2,
         onUpdate: () => {},
       },
     },
@@ -174,17 +184,10 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
         onUpdate: () => {
           cristalMaterial.color.set(new THREE.Color(colors.cristal.replace(",1)", ")")));
           cristalMaterial.needsUpdate = true;
+
           sodaMaterial.color.set(new THREE.Color(colors.soda.replace(",1)", ")")));
           sodaMaterial.needsUpdate = true;
         },
-      },
-    },
-    {
-      target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 4,
-      animationsProperties: {
-        y: -(350 / 180) * Math.PI,
-        onUpdate: () => {},
       },
     },
     {
@@ -218,13 +221,12 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 4,
+      pointTime: 4.1,
       animationsProperties: {
         background: "#71C4F4",
       },
     },
-
-    // Sunset - Sarsaparrilla
+    // Sunset Sarsaparrilla - Page 3
     {
       target: scene.getObjectByName("BottleGroup").position,
       pointTime: 6,
@@ -234,25 +236,26 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
       },
     },
     {
-      target: colors,
+      target: scene.getObjectByName("BottleGroup").rotation,
       pointTime: 6,
+      animationsProperties: {
+        y: Math.PI * 2,
+        onUpdate: () => {},
+      },
+    },
+    {
+      target: colors,
+      pointTime: 6.1,
       animationsProperties: {
         cristal: "#7E3810",
         soda: "#602A0C",
         onUpdate: () => {
           cristalMaterial.color.set(new THREE.Color(colors.cristal.replace(",1)", ")")));
           cristalMaterial.needsUpdate = true;
+
           sodaMaterial.color.set(new THREE.Color(colors.soda.replace(",1)", ")")));
           sodaMaterial.needsUpdate = true;
         },
-      },
-    },
-    {
-      target: scene.getObjectByName("BottleGroup").rotation,
-      pointTime: 6,
-      animationsProperties: {
-        y: (350 / 180) * Math.PI,
-        onUpdate: () => {},
       },
     },
     {
@@ -286,12 +289,11 @@ export const LoadAnimations = (scene, colors, cristalMaterial, sodaMaterial, bra
     },
     {
       target: document.getElementById("bg_container"),
-      pointTime: 6,
+      pointTime: 6.1,
       animationsProperties: {
         background: "#F5C771",
       },
     },
   ];
-
   return Animations;
 };
